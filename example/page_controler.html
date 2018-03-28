@@ -1,0 +1,16 @@
+<div style="position: fixed; top:0px; left:0px;">
+  <img src="background.jpg" style="object-fit: cover;">
+</div>
+<div style="position: fixed; bottom:0px; right:0px;">
+  <img src="https://orig00.deviantart.net/e50d/f/2017/362/1/0/__i_m_so_mad____by_mellowkun-dby614m.gif">
+</div>
+
+<div style="position: fixed; top:0px; left:0px;">
+  <div>
+    <button (click)="arrowLeft($event)">&lt;&lt;</button>
+    <button (click)="arrowRight($event)">&gt;&gt;</button>
+  </div>
+  <div style="margin:64px;">
+    <router-outlet [routes]="routes.all"></router-outlet>
+  </div>
+</div>

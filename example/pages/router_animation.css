@@ -1,0 +1,57 @@
+@keyframes fadeOut {
+  0% {opacity:1;}
+100% {opacity:0;}
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+100% {opacity:1;}
+}
+.fade {
+  animation-duration: 400ms;
+  animation-fill-mode:both;
+}
+.fade.nextout {
+  animation-name: fadeOut;
+}
+.fade.nextin {
+  animation-name: fadeIn;
+}
+.fade.backout {
+  animation-name: fadeOut;
+}
+.fade.backin {
+  animation-name: fadeIn;
+}
+
+@keyframes slideOutNext {
+    0% {opacity:1; transform: translateX(   0px);}
+  100% {opacity:0; transform: translateX(-100px);}
+}
+@keyframes slideInNext {
+    0% {opacity:0; transform: translateX( 100px);}
+  100% {opacity:1; transform: translateX(   0px);}
+}
+@keyframes slideOutBack {
+    0% {opacity:1; transform: translateX(   0px);}
+  100% {opacity:0; transform: translateX( 100px);}
+}
+@keyframes slideInBack {
+    0% {opacity:0; transform: translateX(-100px);}
+  100% {opacity:1; transform: translateX(   0px);}
+}
+.slide {
+  animation-duration: 400ms;
+  animation-fill-mode:both;
+}
+.slide.nextout {
+  animation-name: slideOutNext;
+}
+.slide.nextin {
+  animation-name: slideInNext;
+}
+.slide.backout {
+  animation-name: slideOutBack;
+}
+.slide.backin {
+  animation-name: slideInBack;
+}
