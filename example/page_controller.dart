@@ -4,15 +4,15 @@ import 'package:angular_router/angular_router.dart';
 import 'page_routes.dart';
 
 @Component(
-  selector: 'page-controler',
-  templateUrl: 'page_controler.html',
+  selector: 'page-controller',
+  templateUrl: 'page_controller.html',
   directives: [routerDirectives],
   providers: [PageRoutes],
 )
-class PageControler {
+class PageController {
   final PageRoutes routes;
   final Router router;
-  PageControler(this.routes, this.router);
+  PageController(this.routes, this.router);
 
   arrowRight(ht.MouseEvent ev) {
     const nextpage = {'': 'p002', 'p001': 'p002', 'p002': 'p003', 'p003': 'p001'};
