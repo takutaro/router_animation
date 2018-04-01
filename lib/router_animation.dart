@@ -29,17 +29,17 @@ class RouterAnimationOperator implements OnActivate, CanDeactivate {
   Future<Null> _animation(String animation_class, {clear = false}) async {
     ElementList<Element> _animElms = querySelectorAll('.router_animation');
     _aminCount = _animElms.length;
-    for (var el in _animElms) {
+    _animElms.forEach((el) {
       el.addEventListener('animationend', _animTerminated);
       el.classes.add(animation_class); // animation trigger
-    }
+    });
     while (_animInProgress()) {
       await Future.delayed(Duration(milliseconds: 100));
     }
-    for (var el in _animElms) {
+    _animElms.forEach((el) {
       el.removeEventListener('animationend', _animTerminated);
       if (clear) el.classes.remove(animation_class);
-    }
+    });
   }
 
   void _pointer_events({disable = false}) {
