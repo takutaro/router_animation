@@ -1,8 +1,13 @@
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
-import 'page_controller.dart';
-import 'main.template.dart' as ng;
+import 'page_controller.template.dart' as ng;
+import 'main.template.dart' as self;
+
+@GenerateInjector(
+  routerProvidersHash,
+)
+final InjectorFactory injector = self.injector$Injector;
 
 void main() {
-  bootstrapStatic(PageController, [routerProvidersHash], ng.initReflector);
+  runApp(ng.PageControllerNgFactory, createInjector: injector);
 }
